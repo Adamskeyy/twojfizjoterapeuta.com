@@ -1,0 +1,265 @@
+/* General styles */
+
+*,
+*::before,
+*::after,
+p {
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    font-family: 'Montserrat', sans-serif;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+
+main {
+    width: 80%;
+    margin: 0 auto;
+}
+
+img {
+    width: 100%;
+    margin-top: 40px;
+}
+
+h2 {
+    padding: 15px 0;
+    margin-bottom: 25px;
+    border-bottom: 1px solid  rgba(56, 61, 60, 0.25);
+}
+
+/* Navigation bar styles */
+
+nav {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: #fff;
+    padding: 20px 0 20px;
+}
+
+.logo img {
+    margin: 0;
+}
+
+.nav-links {
+    min-width: 50%;
+    font-size: 1.4em;
+    display: flex;
+    justify-content: space-around;
+    list-style: none;
+}
+
+
+li > a {
+    text-decoration: none;
+    color: #17856b;
+    font-weight: bold;
+}
+
+.nav-link {
+    transition: transform .2s ease-in-out;
+}
+
+.nav-link:hover {
+    transform: scale(1.2);
+}
+
+.burger {
+    display: none;
+}
+
+.burger div {
+    width: 25px;
+    height: 3px;
+    background-color: #17856b;
+    margin: 5px;
+    transition: all 0.3s ease;
+}
+
+
+/* Main styles */
+
+#hero {
+    background-image: url('./assets/beach_2.jpg');
+}
+
+.nav-gap {
+    height: 162px;
+}
+
+pre {
+    font-family: inherit;
+    white-space: pre-line;
+}
+
+main {
+    margin-top: 170px;
+}
+
+
+/* Contact info */
+
+#contact-info {
+    padding: 40px 0;
+    text-align: center;
+}
+
+#contact-info p{
+    line-height: 2.5;
+}
+
+.contact-links {
+    display: flex;
+    justify-content: space-around;
+    margin: 30px auto 30px;
+}
+
+.fa {
+    transition: all .2s ease-in-out;
+}
+
+.fa {
+    color:  #383d3c;
+}
+
+.fa:hover {
+    color:  #17856b;
+}
+
+/* Footer styles */
+
+footer {
+    background-color: #17856b;
+    color: white;
+    padding: 20px 0;
+    margin-top: 20px;
+    text-align: center;
+    width: 100%;
+}
+
+/* Media queries */
+
+@media (max-width: 1300px) {
+    nav {
+        flex-direction: column;
+    }
+
+    .nav-link {
+        padding: 0 20px;
+    }
+
+    main {
+        margin-top: 200px;
+    }
+}
+
+@media (max-width: 767px) {
+    .logo img {
+        width: 340px;
+        height: auto;
+    }
+
+    nav {
+        flex-direction: row;
+    }
+
+    .burger {
+        display: block;
+        cursor: pointer;
+    }
+
+    .nav-links {
+        position: absolute;
+        font-size: 1.6em;
+        right: 0;
+        height: calc(100vh - 108.281px);
+        top: 108.281px;
+        background-color: #fff;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 50%;
+        transform: translateX(100%);
+        transition: transform 0.3s ease-in;
+    }
+
+    .nav-active {
+        transform: translateX(0%);
+    }
+    
+    @keyframes navLinkFade {
+        from {
+            opacity: 0;
+            transform: translateX(50px);
+        }
+        to {
+            opacity: 1;
+            transform: translateX(0px);
+        }
+    }
+
+    .toggle .line1 {
+        transform: rotate(-45deg) translate(-5px, 6px);
+    }
+
+    .toggle .line2 {
+        opacity: 0;
+        transform: translateX(30px);
+    }
+
+    .toggle .line3 {
+        transform: rotate(45deg) translate(-5px, -6px);
+    }
+
+    .nav-link {
+        opacity: 0;
+    }
+
+    .fa {
+        font-size: 40px;
+    }
+
+    main {
+        margin-top: 150px;
+        width: 90%;
+    }
+}
+
+@media (max-width: 380px) {
+    html {
+        font-size: 0.85em;
+    }
+
+    nav {
+        justify-content: space-between;
+    }
+
+    .nav-links {
+        height: calc(100vh - 80.81px);
+        top: 80.81px;
+    }
+
+    .burger {
+        padding-right: 15px;
+    }
+
+    .logo {
+        padding-left: 5px;
+    }
+
+    .logo img {
+        width: 200px;
+        height: auto;
+    }
+
+    main {
+        margin-top: 90px;
+    }
+}
