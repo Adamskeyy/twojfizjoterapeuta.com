@@ -40,8 +40,9 @@ nav {
     top: 0;
     left: 0;
     width: 100%;
-    background-color: #fff;
+    background-color: rgb(255, 255, 255);
     padding: 20px 0 20px;
+    z-index: 999;
 }
 
 .logo img {
@@ -68,7 +69,7 @@ li > a {
 }
 
 .nav-link:hover {
-    transform: scale(1.2);
+    transform: scale(1.1);
 }
 
 .burger {
@@ -87,16 +88,52 @@ li > a {
 /* Main styles */
 
 #hero {
-    background-image: url('./assets/beach_2.jpg');
+    position: relative;
 }
 
-.nav-gap {
-    height: 162px;
+#hero img {
+    margin-top: 0;
+    object-position: 50% 30%;
+    object-fit: cover;
+    width: 100%;
+    max-height: 600px;
+}
+
+.hello-there {
+    position: absolute;
+    top: 65%;
+    left: 50%;
+    transform:translate(-50%,-50%);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.hello-there h1 {
+    color: white;
+}
+
+.contact-btn {
+    background-color: #17856b;
+    color: white;
+    text-decoration: none;
+    font-size: 1.2em;
+    font-weight: bold;
+    margin-top: 15px;
+    padding: 10px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.contact-btn:hover {
+    background-color: #005c46;
 }
 
 pre {
     font-family: inherit;
     white-space: pre-line;
+    line-height: 1.9em;
 }
 
 main {
@@ -107,12 +144,21 @@ main {
 /* Contact info */
 
 #contact-info {
-    padding: 40px 0;
+    padding: 0;
     text-align: center;
+    scroll-margin-top: 0px !important;
 }
 
 #contact-info p{
     line-height: 2.5;
+}
+
+#contact-info img {
+    margin-top: 0;
+    object-position: 50% 30%;
+    object-fit: cover;
+    width: 100%;
+    max-height: 600px;
 }
 
 .contact-links {
@@ -142,6 +188,7 @@ footer {
     margin-top: 20px;
     text-align: center;
     width: 100%;
+    font-size: 0.8em;
 }
 
 /* Media queries */
@@ -259,6 +306,9 @@ footer {
         height: auto;
     }
 
+    .hello-there {
+        font-size: 0.9em;
+    }
     main {
         margin-top: 90px;
     }
