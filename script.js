@@ -31,6 +31,7 @@ const adjustToResize = () => {
 }
 
 const app = () => {
+    setProperScrollMargin();
     navSlide();
     adjustToResize();
 }

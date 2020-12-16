@@ -149,12 +149,12 @@ main {
     scroll-margin-top: 0px !important;
 }
 
-#contact-info p{
+#contact-info p {
     line-height: 2.5;
 }
 
 #contact-info img {
-    margin-top: 0;
+    margin-top: 40px;
     object-position: 50% 30%;
     object-fit: cover;
     width: 100%;
